@@ -1,0 +1,33 @@
+class Solution {
+public:
+
+    //Boyer–Moore majority vote algorithm	
+    int majorityElement(vector<int>& nums) {      
+        int ans =0;
+        if (nums.size() <= 1)
+        {
+            return  ans = nums[0];
+        }
+        
+        int vote = nums[0];
+        int count = 1;
+        
+        for(int i=1; i < nums.size(); i++)
+        {
+            if(count == 0)
+            {
+                vote = nums[i];
+            }
+            
+            if(vote ==nums[i])
+            {
+                count++;
+            }
+            else
+            {
+                count--;
+            }
+        }
+        return vote;
+    }
+};
