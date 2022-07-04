@@ -1,3 +1,16 @@
+Easy 169. Majority Element 2022/05/18
+
+Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+題目:超過矩陣二分之一的數值
+
+解法:兩個迴圈，累加數值，如果某一個數值累積超過門檻值，則輸出
+
+Runtime 45ms  Memory 19.5MB
+
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {

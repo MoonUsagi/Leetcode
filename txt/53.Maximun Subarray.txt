@@ -1,3 +1,17 @@
+Medium  53. Maximum Subarray 2022/05/11
+
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+A subarray is a contiguous part of an array.
+
+題目:找矩陣連續最大值
+
+解法:掃描矩陣，去找到連續最大值，如果是負數就歸零，最大值超越就用另一個矩陣取代儲存
+
+Runtime 26ms  Memory 17MB
+
+
+
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {

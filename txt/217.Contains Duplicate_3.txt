@@ -1,0 +1,22 @@
+Easy  217. Contains Duplicate  2022/05/26
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+題目:矩陣數字有重複回傳true，反之false
+
+解法:建unordered_set，如果數值有兩個相同回傳true
+
+Runtime 102 ms  Memory 51.5MB
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> map;
+        for (int num : nums)
+        {
+            if (!map.insert(num).second) 
+                return true;
+        }
+        return false;
+    }
+};

@@ -1,0 +1,29 @@
+9. Palindrome Number  2022/05/18
+
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+題目:判斷整數是否有顛倒性
+
+解法:將整數做while，當while不為零，則對整數除以10，得到的值顛倒擺
+
+Runtime 26ms  Memory 17MB
+
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+
+        if (x < 0) return false;
+        int y = x;
+        double reverse = 0;
+
+        while (x != 0)
+        {
+            reverse = reverse*10 +x%10;
+            x = x / 10;
+        }
+        return (y == reverse);
+    }
+};

@@ -1,0 +1,28 @@
+Easy  70. Climbing Stairs  2022/06/29
+
+You are climbing a staircase. It takes n steps to reach the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+題目:費式數列
+
+解法:迴圈從2開始算，f(x) = f(n-2) + f(n-1)
+
+Runtime 5ms  Memory 5.9MB
+
+
+class Solution {
+public:
+    int climbStairs(int n) {
+        int count = 0;
+        if (n <= 2) return count = n;
+        
+        for(int i=2; i<=n; i++)
+        {   
+            int temp = i
+            count = (i-2) + (i-1);
+            
+        }
+        return(count);
+    }
+};

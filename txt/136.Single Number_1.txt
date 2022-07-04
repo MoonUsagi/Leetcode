@@ -1,3 +1,14 @@
+Easy  136. Single Number  2022/05/18
+
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+題目:找到矩陣中的單一值
+
+解法:xor法，會留下殘餘單一值
+
+
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {

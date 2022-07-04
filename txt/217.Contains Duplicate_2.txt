@@ -1,0 +1,24 @@
+Easy  217. Contains Duplicate  2022/05/26
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+題目:矩陣數字有重複回傳true，反之false
+
+解法:排序，有相同回傳true
+
+Runtime  153ms  Memory 46.6MB
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        sort(begin(nums), end(nums));
+        for(int i =1;i<nums.size();i++)
+        {
+            if(nums[i] == nums[i-1])
+            {
+                    return true;
+            }
+
+        }
+
+Runtime: 153 ms, Memory Usage: 46.6 MB

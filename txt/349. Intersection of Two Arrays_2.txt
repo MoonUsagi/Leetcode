@@ -1,0 +1,27 @@
+Easy  349. Intersection of Two Arrays 2022/05/26
+
+Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
+
+
+題目:回傳兩個矩陣相同的數值
+
+解法:
+
+Runtime 6ms  Memory 10.6MB
+
+
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        
+        unordered_set<int> st(nums1.begin(), nums1.end()), res;
+        for (auto a : nums2) {
+	    // 掃描nums2的矩陣，查看st裡面有沒有a這個數值，有個話把a寫入在res.insert裡面
+            if (st.count(a)) 
+		res.insert(a);
+        }
+        return vector<int>(res.begin(), res.end());
+    }
+};
+
+//Runtime: 6 ms,Memory Usage: 10.6 MB
